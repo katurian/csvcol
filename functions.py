@@ -1,7 +1,7 @@
 import os       
 import csv
 
-def addColumns(inputCSV, outputCSV, cols):
+def extractColumns(inputCSV, outputCSV, cols):
     cols = sorted(cols, reverse=True)
     with open(inputCSV, "r") as input:
         reader = csv.reader(input)
