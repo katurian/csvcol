@@ -4,19 +4,19 @@ from zipfile import ZipFile
 
 def addColumns(inputCSV, outputCSV, cols):
     cols = sorted(cols, reverse=True)
-    with open(inputCSV, "r") as inp:
-        reader = csv.reader(inp)
-        with open(outputCSV, "w", newline='') as output:
-            writer = csv.writer(output)
+    with open(inputCSV, 'r') as ip:
+        reader = csv.reader(ip)
+        with open(outputCSV, 'w', newline='') as op:
+            writer = csv.writer(op)
             for row in reader:
                 writer.writerow([row[n] for n in cols])
      os.remove(inputCSV)
         
 def removeColumns(inputCSV, outputCSV, cols):   
-    with open(inputCSV, "r") as inp:
-        reader = csv.reader(inp)
-        with open(outputCSV, "w", newline='') as output:
-            writer = csv.writer(output)
+    with open(inputCSV, 'r') as ip:
+        reader = csv.reader(ip)
+        with open(outputCSV, 'w', newline='') as op:
+            writer = csv.writer(op)
             for row in reader:
                 for index in cols:
                     del row[index]
