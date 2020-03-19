@@ -10,7 +10,7 @@ def addColumns(inputCSV, outputCSV, cols):
             writer = csv.writer(op)
             for row in reader:
                 writer.writerow([row[n] for n in cols])
-     os.remove(inputCSV)
+    os.remove(inputCSV)
         
 def removeColumns(inputCSV, outputCSV, cols):   
     with open(inputCSV, 'r') as ip:
