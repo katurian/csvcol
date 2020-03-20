@@ -13,7 +13,6 @@ def addColumns(inputCSV, outputCSV, cols):
                 writer.writerow([row[n] for n in cols])
     os.remove(inputCSV)
 
-
 def removeColumns(inputCSV, outputCSV, cols):
     cols = sorted(cols, reverse=True)
     with open(inputCSV, 'r') as ip:
@@ -25,7 +24,6 @@ def removeColumns(inputCSV, outputCSV, cols):
                     del row[index]
                 writer.writerow(row)
     os.remove(inputZip)
-
 
 def fromZipExtractCSVs(inputZip):
     with ZipFile(inputZip, 'r') as zipObj:
