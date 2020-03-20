@@ -2,7 +2,6 @@ import os
 import csv
 from zipfile import ZipFile
 
-
 def addColumns(inputCSV, outputCSV, cols):
     cols = sorted(cols, reverse=True)
     with open(inputCSV, 'r') as ip:
