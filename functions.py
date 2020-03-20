@@ -22,7 +22,7 @@ def removeColumns(inputCSV, outputCSV, cols):
                 for index in cols:
                     del row[index]
                 writer.writerow(row)
-    os.remove(inputZip)
+    os.remove(inputCSV)
 
 def fromZipExtractCSVs(inputZip):
     with ZipFile(inputZip, 'r') as zipObj:
